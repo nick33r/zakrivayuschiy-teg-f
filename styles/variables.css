@@ -1,1 +1,23 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Fonts */
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', sans-serif;
+  --main-font-size: 18px;
+  --main-font-line-height: 21px;
+  --main-font-weight: 400;
+  --main-font-title-weight: 700;
+
+  /* Header */
+  --header-inline-size: min(100%, 700px);
+  --header-block-size: clamp(20.438rem, 12.615vw + 17.481rem, 23rem);
+  --header-logo-sizes: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  --header-title-sizes: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+
+  /* Main */
+  --main-inline-size: min(100%, 700px);
+  --card-title-font-size: 18px;
+  --card-title-line-height: 21.78px;
+  --card-title-font-weight: 700;
+}
