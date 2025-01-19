@@ -20,4 +20,5 @@
   --card-title-font-size: 18px;
   --card-title-line-height: 21.78px;
   --card-title-font-weight: 700;
+  --card-image-lable-right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
 }

@@ -39,6 +39,7 @@
   gap: 20px;
   border: 2px solid #000;
   background-color: #fff;
+  margin: auto;
   margin-block-end: 100px;
 }
 
@@ -76,10 +77,36 @@
   padding: 3.5px 10px 5.5px;
 }
 
+.card__image-wrapper {
+  position: relative;
+}
+
 .card__image {
   inline-size: 100%;
   border-block-start: 2px solid #000;
   border-block-end: 2px solid #000;
+}
+
+.card__image-lable {
+  position: absolute;
+  inset: 25px var(--card-image-lable-right, clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem)) auto auto;
+  font-family: var(--accent-font, 'PressStart2P', sans-serif);
+  font-size: 14px;
+  line-height: 14px;
+  color: #000;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  mix-blend-mode: hard-light;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__image-lable {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
 }
 
 .card__content {
@@ -94,12 +121,28 @@
   gap: 27px;
 }
 
-.card__text {
-}
-
 .card__like-button {
-
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 10.5px 37px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button__text {
+  font-family: var(--accent-font, 'PressStart2P', sans-serif);
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.save-button {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 15px 19px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
