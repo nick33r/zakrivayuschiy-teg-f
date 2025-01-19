@@ -79,12 +79,13 @@
 
 .card__image-wrapper {
   position: relative;
+  border-block-start: 2px solid #000;
+  border-block-end: 2px solid #000;
+  display: grid;
 }
 
 .card__image {
   inline-size: 100%;
-  border-block-start: 2px solid #000;
-  border-block-end: 2px solid #000;
 }
 
 .card__image-lable {
@@ -190,4 +191,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ---------- Filters ---------- */
+
+.filter__grayscale {
+  filter: grayscale(0.8);
+}
+
+.filter__saturate {
+  filter: saturate(2);
+}
+
+.filter__hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.filter__invert {
+  filter: invert(0.8);
+}
+
+.filter__sepia {
+  filter: sepia(90%);
+}
+
+.filter__blur {
+  filter: blur(10px);
+}
+
+.filter__hue-contrast-blur {
+  filter: hue-rotate(120deg) contrast(0.5) blur(1px);
 }
