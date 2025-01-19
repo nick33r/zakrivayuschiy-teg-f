@@ -21,4 +21,12 @@
   --card-title-line-height: 21.78px;
   --card-title-font-weight: 700;
   --card-image-lable-right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
+  --modal-inline-size: clamp(21.313rem, 3.692vw + 20.447rem, 22.063rem);
+  --modal-padding: 30px 42px;
+}
+
+@media screen and (width >= 700px) {
+  :root {
+    --modal-padding: 30px;
+  }
 }

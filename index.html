@@ -335,9 +335,23 @@
           </button>
         </div>
       </article>
-      <button class="save-button">
+
+      <button 
+      class="save-button"
+      onclick="window['save-modal'].showModal()"
+      aria-controls="save-modal"
+      >
         <span class="button__text">Сохранить на память</span>
       </button>
+
+      <dialog id="save-modal" class="modal">
+        <div class="modal-content">
+          <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button class="modal-button" type="button" onclick="window['save-modal'].close()">
+          <span class="button__text">ок</span>
+        </button>
+      </dialog>
     </main>
 
     <script src="./scripts/like.js"></script>
