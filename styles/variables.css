@@ -46,7 +46,7 @@
   --modal-padding: 30px 42px;
 }
 
-@media screen and (width < 375px) {
+@media screen and (width <= 375px) {
   :root {
     --header-logo-sizes: clamp(2.375rem, 1.5893rem + 6.2857vw, 3.0625rem);
   }
