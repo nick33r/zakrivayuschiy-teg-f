@@ -38,10 +38,14 @@
 
   /* Main */
   --main-inline-size: min(100%, 700px);
+  --card-title-padding: 3.5px 10px 5.5px;
   --card-title-font-size: 18px;
   --card-title-line-height: 21.78px;
   --card-title-font-weight: 700;
   --card-image-lable-right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
+  --save-icon-size: 21px;
+
+  /* Modal */
   --modal-inline-size: clamp(21.313rem, 3.692vw + 20.447rem, 22.063rem);
   --modal-padding: 30px 42px;
 }
@@ -49,11 +53,13 @@
 @media screen and (width <= 375px) {
   :root {
     --header-logo-sizes: clamp(2.375rem, 1.5893rem + 6.2857vw, 3.0625rem);
+    --save-icon-size: 28px;
   }
 }
 
 @media screen and (width >= 700px) {
   :root {
+    /* --card-title-padding: 3px 10px; */
     --modal-padding: 30px;
   }
 }

@@ -56,10 +56,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -101,10 +103,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -142,10 +146,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -187,10 +193,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -231,10 +239,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -274,10 +284,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -319,10 +331,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -366,10 +380,12 @@
             </p>
           </div>
           <div class="card__like-section">
-            <svg class="like-icon" viewBox="0 0 27 24">
-              <use href="#heart"></use>
-            </svg>
-            <button class="card__like-button" type="button">
+            <button class="card__icon-button" type="button">
+              <svg class="like-icon" viewBox="0 0 27 24">
+                <use href="#heart"></use>
+              </svg>
+            </button>
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -377,7 +393,7 @@
       </article>
 
       <button
-        class="save-button"
+        class="save-button button"
         onclick="window['save-modal'].showModal()"
         aria-controls="save-modal"
       >
@@ -392,10 +408,16 @@
 
       <dialog id="save-modal" class="modal">
         <div class="modal-content">
+          <svg class="modal__icon" viewBox="0 0 29 28">
+            <use href="#floppy"></use>
+          </svg>
+            <!-- <svg class="modal__icon" viewBox="0 0 29 28">
+              <use href="./svg/floppy.svg#floppy"></use>
+            </svg> -->
           <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
         </div>
         <button
-          class="modal-button"
+          class="modal-button button"
           type="button"
           onclick="window['save-modal'].close()"
         >
@@ -408,7 +430,7 @@
   </body>
 </html>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none" class="visually-hidden">
   <symbol id="floppy" viewBox="0 0 29 28">
     <path fill="currentColor" d="M.5 0h2.15385v2.15385H.5z"/>
     <path fill="currentColor" d="M.5 2.15381h2.15385v2.15385H.5z"/>
@@ -466,7 +488,7 @@
   </symbol>
   </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" class="visually-hidden">
   <symbol id="heart" viewBox="0 0 27 24">
     <path
       fill="#000"
