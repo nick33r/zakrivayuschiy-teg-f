@@ -1,9 +1,8 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Для корректной работы скриптов на этом сайте нужно, чтобы в HTML классы были названы:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
@@ -179,6 +178,7 @@
   background-color: transparent;
   cursor: pointer;
   outline: 2px solid transparent;
+  outline-offset: -4px;
   transition: outline 0.3s ease;
 }
 
@@ -188,12 +188,11 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid #000;
-  outline-offset: 2px;
 }
 
 .like-icon {
-  inline-size: 27px;
-  block-size: 24px;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .card__like-button {

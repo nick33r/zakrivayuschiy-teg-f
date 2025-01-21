@@ -48,6 +48,10 @@
   /* Modal */
   --modal-inline-size: clamp(21.313rem, 3.692vw + 20.447rem, 22.063rem);
   --modal-padding: 30px 42px;
+
+  /* Heart-icon */
+  --contour-color: #000;
+  --sparks-color: #ff0000;
 }
 
 @media screen and (width <= 375px) {
