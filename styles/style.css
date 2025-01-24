@@ -12,48 +12,48 @@
 /* ---------- Page styles ---------- */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  justify-items: center;
+  padding: 100px 0;
   font-family: var(--main-font, 'Inter-Variable', sans-serif);
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-font-line-height, 21px);
-  font-variation-settings: "wght" var(--main-font-weight, 400);
   background-image: var(--background-gradient, url(../images/background.svg));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 100px 0;
-  justify-items: center;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
 }
 
 /* ---------- Button ---------- */
 
 .button {
-  background-color: #fff;
-  border: 2px solid #000;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
   box-shadow: none;
+  overflow: hidden;
+  background-color: #fff;
   transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .button::before {
   content: '';
-  inset: 0;
   position: absolute;
+  inset: 0;
   background-color: #000;
-  translate: -100%;
   transition: translate 0.5s ease-in-out;
+  translate: -100%;
 }
 
 .button:focus {
-  outline: none;
   box-shadow: 2px 2px #000;
+  outline: none;
 }
 
 .button:hover::before {
@@ -61,11 +61,11 @@
 }
 
 .button__text {
+  z-index: 1;
+  color: #000;
   font-family: var(--accent-font, 'PressStart2P', sans-serif);
   font-size: 13px;
   line-height: 13px;
-  z-index: 1;
-  color: #000;
   transition: color 0.5s ease-in-out;
 }
 
@@ -76,16 +76,16 @@
 /* ---------- Header layout ---------- */
 
 .header {
-  inline-size: var(--header-inline-size, min(100%, 700px));
-  min-block-size: var(--header-block-size, clamp(20.438rem, 12.615vw + 17.481rem, 23rem));
-  font-family: var(--accent-font, 'PressStart2P', sans-serif);
   display: grid;
-  text-align: center;
   gap: 20px;
-  border: 2px solid #000;
-  background-color: #fff;
   margin: auto;
   margin-block-end: 100px;
+  border: 2px solid #000;
+  font-family: var(--accent-font, 'PressStart2P', sans-serif);
+  text-align: center;
+  background-color: #fff;
+  inline-size: var(--header-inline-size, min(100%, 700px));
+  min-block-size: var(--header-block-size, clamp(20.438rem, 12.615vw + 17.481rem, 23rem));
 }
 
 .header__logo {
@@ -110,23 +110,23 @@
 }
 
 .card {
-  inline-size: var(--main-inline-size, min(100%, 700px));
   border: 2px solid #000;
   background-color: #fff;
+  inline-size: var(--main-inline-size, min(100%, 700px));
 }
 
 .card__title {
+  padding: var(--card-title-padding, 3.5px 10px 5.5px);
   font-size: var(--card-title-font-size, 18px);
   line-height: var(--card-title-line-height, 21.78px);
   font-variation-settings: "wght" var(--card-title-font-weight, 700);
-  padding: var(--card-title-padding, 3.5px 10px 5.5px);
 }
 
 .card__image-wrapper {
   position: relative;
+  display: grid;
   border-block-start: 2px solid #000;
   border-block-end: 2px solid #000;
-  display: grid;
   overflow: hidden;
 }
 
@@ -138,29 +138,29 @@
 .card__image-lable {
   position: absolute;
   inset: 25px var(--card-image-lable-right, clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem)) auto auto;
+  color: #000;
   font-family: var(--accent-font, 'PressStart2P', sans-serif);
   font-size: 14px;
   line-height: 14px;
-  color: #000;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   cursor: default;
   -webkit-user-select: none;
   user-select: none;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   mix-blend-mode: hard-light;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__image-lable {
+    text-shadow: none;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
-    text-shadow: none;
   }
 }
 
 .card__content {
-  padding: 25px;
   display: grid;
   gap: 25px;
+  padding: 25px;
 }
 
 .card__textblock {
@@ -170,20 +170,21 @@
 
 .card__like-section {
   display: flex;
-  gap: 6px;
-  align-items: end;
   justify-content: end;
+  align-items: end;
+  gap: 6px;
 }
 
 .card__icon-button {
   border: none;
-  background-color: transparent;
-  cursor: pointer;
+  padding-block-start: 2px;
   outline: 2px solid transparent;
-  outline-offset: -4px;
+  outline-offset: -2px;
+  background-color: transparent;
   transition: outline 0.3s ease;
+  cursor: pointer;
   inline-size: 39px;
-  block-size: 36px;
+  block-size: 38px;
 }
 
 .card__icon-button:focus {
@@ -204,8 +205,8 @@
 }
 
 .save-button {
-  padding: 15px 19px;
   gap: 8px;
+  padding: 15px 19px;
 }
 
 .save-button .button__text {
@@ -213,9 +214,9 @@
 }
 
 .save-icon {
+  z-index: 1;
   width: var(--save-icon-size, 21px);
   height: var(--save-icon-size, 21px);
-  z-index: 1;
   color: #000;
   transition: color 0.5s ease-in-out;
 }
@@ -227,13 +228,13 @@
 /* ---------- Modal ---------- */
 
 .modal {
-  inline-size: var(--modal-inline-size, clamp(21.313rem, 3.692vw + 20.447rem, 22.063rem));
-  background-color: #fff;
-  outline: 2px solid #000;
-  border: none;
-  padding: var(--modal-padding, 30px 42px);
   flex-direction: column;
   gap: 30px;
+  border: none;
+  padding: var(--modal-padding, 30px 42px);
+  outline: 2px solid #000;
+  background-color: #fff;
+  inline-size: var(--modal-inline-size, clamp(21.313rem, 3.692vw + 20.447rem, 22.063rem));
 }
 
 .modal[open] {
@@ -251,8 +252,8 @@
 .modal-content {
   display: grid;
   grid-template-columns: 39px 1fr;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
 }
 
 .modal__text {
@@ -262,15 +263,15 @@
 }
 
 .modal-button {
-  inline-size: 100%;
-  padding: 10.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #000;
+  padding: 10.5px;
+  text-transform: uppercase;
   background-color: #fff;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+  inline-size: 100%;
 }
 
 /* ---------- Filters ---------- */
