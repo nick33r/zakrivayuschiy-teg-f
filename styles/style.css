@@ -130,6 +130,7 @@
 
 .card__image {
   inline-size: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .card__image-lable {
@@ -163,13 +164,12 @@
 .card__textblock {
   display: grid;
   gap: 27px;
-  /* text-shadow: 1px 1px #6f6f6f82; */
 }
 
 .card__like-section {
   display: flex;
-  gap: 12px;
-  align-items: center;
+  gap: 6px;
+  align-items: end;
   justify-content: end;
 }
 
@@ -180,6 +180,8 @@
   outline: 2px solid transparent;
   outline-offset: -4px;
   transition: outline 0.3s ease;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .card__icon-button:focus {
@@ -191,8 +193,8 @@
 }
 
 .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .card__like-button {

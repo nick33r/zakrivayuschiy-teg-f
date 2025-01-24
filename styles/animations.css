@@ -1,11 +1,77 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+/* !! Heart animations !! */
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+/* ---------- Like effect ---------- */
 
-*/
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes sparks-blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.like-icon.is-liked {
+  animation: heart-scale 0.3s ease-in 0.1s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-blink 0.3s ease-in 0.3s;
+}
+
+/* ---------- Hover effect ---------- */
+
+.card__icon-button:hover .heart-icon * {
+  opacity: 1;
+}
+
+/* ---------- Active effect ---------- */
+
+.card__icon-button:active .main-body,
+.card__icon-button:active .core {
+  fill: var(--active-heart-color, #ff0000);
+}
+
+.like-icon.is-liked .heart-icon * {
+  fill: var(--active-heart-color, #ff0000);
+  opacity: 1;
+}
+
+/* ---------- Transitions ---------- */
+
+.contour {
+  transition: fill 0.3s 0.06s;
+}
+
+.main-body {
+  opacity: 0;
+  transition: opacity 0.3s,
+              fill 0.3s 0.03s;
+}
+
+.core {
+  opacity: 0;
+  transition: opacity 0.3s 0.03s,
+              fill 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  transition: opacity 0.3s 0.05s;
+}
+
+.card__icon-button:hover .core {
+  transition: opacity 0.3s;
+}
