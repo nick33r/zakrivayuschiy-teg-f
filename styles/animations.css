@@ -35,7 +35,7 @@
 /* ---------- Hover effect ---------- */
 
 .card__icon-button:hover .heart-icon * {
-  opacity: 1;
+  fill: var(--inactive-heart-color, #000);
 }
 
 /* ---------- Active effect ---------- */
@@ -47,45 +47,47 @@
 
 .like-icon.is-liked .heart-icon * {
   fill: var(--active-heart-color, #ff0000);
-  opacity: 1;
 }
 
 /* ---------- Transitions ---------- */
 
 .contour {
-  transition: fill 0.1s;
+  transition: fill 0.1s linear;
 }
 
+
 .main-body {
-  opacity: 0;
-  transition: opacity 0.3s,
-              fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .core {
-  opacity: 0;
-  transition: opacity 0.3s 0.03s,
-              fill 0.5s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .card__icon-button:hover .main-body {
-  transition: opacity 0.3s 0.05s,
-              fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .card__icon-button:hover .core {
-  transition: opacity 0.3s,
-              fill 0.3s;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .core {
+  transition: fill 0.3s linear;
 }
 
 .is-liked .contour {
-  transition: fill 0.3s 0.06s;
-}
-
-.is-liked .main-body {
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.11s;
 }
 
 .is-liked .core {
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
+}
+
+.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
 }
