@@ -35,6 +35,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #000;
+  padding: 10.5px;
   box-shadow: none;
   overflow: hidden;
   background-color: #fff;
@@ -69,7 +70,6 @@
   font-family: var(--accent-font, 'PressStart2P', sans-serif);
   font-size: 13px;
   line-height: 13px;
-  /* transition: color 0.5s ease-in-out; */
   mix-blend-mode: difference;
 }
 
@@ -85,13 +85,14 @@
   text-align: center;
   background-color: #fff;
   inline-size: var(--header-inline-size, min(100%, 700px));
-  min-block-size: var(--header-block-size, clamp(20.438rem, 12.615vw + 17.481rem, 23rem));
+  padding: var(--header-padding, 120px 10px);
 }
 
 .header__logo {
   align-content: end;
   font-size: var(--header-logo-sizes, clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem));
   line-height: var(--header-logo-sizes, clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem));
+  text-transform: uppercase;
 }
 
 .header__title {
@@ -133,6 +134,8 @@
 .card__image {
   inline-size: 100%;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__image-lable {
@@ -187,7 +190,7 @@
 }
 
 .card__icon-button:focus {
-  outline: 2px solid transparent;
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
@@ -200,7 +203,7 @@
 }
 
 .card__like-button {
-  padding: 10.5px 37px;
+  min-inline-size: 130px;
 }
 
 .save-button {
@@ -217,13 +220,8 @@
   width: var(--save-icon-size, 21px);
   height: var(--save-icon-size, 21px);
   color: #fff;
-  /* transition: color 0.5s ease-in-out; */
   mix-blend-mode: difference;
 }
-
-/* .save-button:hover .save-icon {
-  color: #fff;
-} */
 
 /* ---------- Modal ---------- */
 
@@ -263,14 +261,7 @@
 }
 
 .modal-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #000;
-  padding: 10.5px;
   text-transform: uppercase;
-  background-color: #fff;
-  cursor: pointer;
   inline-size: 100%;
 }
 

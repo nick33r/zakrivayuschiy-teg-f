@@ -28,7 +28,7 @@
 
   /* Header */
   --header-inline-size: min(100%, 700px);
-  --header-block-size: clamp(20.438rem, 12.615vw + 17.481rem, 23rem);
+  --header-padding: 120px 10px;
   --header-logo-sizes: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   --header-title-sizes: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 
@@ -52,6 +52,7 @@
 
 @media screen and (width <= 375px) {
   :root {
+    --header-padding: 120px 0;
     --header-logo-sizes: clamp(2.375rem, 1.5893rem + 6.2857vw, 3.0625rem);
     --save-icon-size: 28px;
   }
@@ -59,7 +60,7 @@
 
 @media screen and (width >= 700px) {
   :root {
-    /* --card-title-padding: 3px 10px; */
     --modal-padding: 30px;
+    --header-padding: 128px 10px;
   }
 }
