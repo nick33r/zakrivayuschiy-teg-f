@@ -69,7 +69,7 @@
   font-family: var(--accent-font, 'PressStart2P', sans-serif);
   font-size: 13px;
   line-height: 13px;
-  transition: color 0.5s ease-in-out;
+  /* transition: color 0.5s ease-in-out; */
   mix-blend-mode: difference;
 }
 
@@ -216,13 +216,14 @@
   z-index: 1;
   width: var(--save-icon-size, 21px);
   height: var(--save-icon-size, 21px);
-  color: #000;
-  transition: color 0.5s ease-in-out;
+  color: #fff;
+  /* transition: color 0.5s ease-in-out; */
+  mix-blend-mode: difference;
 }
 
-.save-button:hover .save-icon {
+/* .save-button:hover .save-icon {
   color: #fff;
-}
+} */
 
 /* ---------- Modal ---------- */
 
